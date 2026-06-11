@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Teacher Portal — Smart Classroom Noise Monitor</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+  <div class="app-shell">
+    <aside class="sidebar sidebar-teacher" id="sidebar">
+      <div class="sidebar-brand">
+        <h2>Teacher Portal</h2>
+        <p>Controlled classroom access</p>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#dashboard" data-route="dashboard"><span>📊</span> <span>Overview</span></a></li>
+        <li><a href="#events" data-route="events"><span>🔴</span> <span>RED Events</span></a></li>
+        <li><a href="#schedule" data-route="schedule"><span>📅</span> <span>My Schedule</span></a></li>
+        <li><a href="#audio" data-route="audio"><span>🔊</span> <span>Audio Clips</span></a></li>
+        <li><a href="#policy" data-route="policy"><span>📜</span> <span>Access Policy</span></a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-name" id="sidebar-user">—</div>
+        <span class="role-badge teacher">teacher</span>
+        <div class="detail" id="sidebar-rooms" style="margin-top:0.5rem"></div>
+        <button type="button" class="btn btn-secondary btn-sm" style="margin-top:0.75rem;width:100%" id="btn-logout">Sign out</button>
+      </div>
+    </aside>
+    <div class="main-content">
+      <header class="topbar">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+        <div class="topbar-titles">
+          <h1 id="page-title">Overview</h1>
+          <div class="keyword" id="page-keyword">Your assigned classroom</div>
+        </div>
+        <div class="session-timer" id="session-timer">Session: 30:00</div>
+      </header>
+      <main class="page-body" id="page-content"></main>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/teacher-auth.js"></script>
+  <script src="js/teacher-app.js"></script>
+</body>
+</html>
